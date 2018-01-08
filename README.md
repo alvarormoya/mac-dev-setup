@@ -326,11 +326,16 @@ OS X High Sierra comes with [PHP](http://php.net/) 7.1 out of the box. In case y
 
 1. Install the latest version:
 
-    $ curl -s http://php-osx.liip.ch/install.sh | bash -s 7.2
-
+    ```
+    $ curl -s http://php-osx.liip.ch/install.sh | bash -s 7.2
+    ```
+    
 2. In order for the command line to use the new version of PHP you will need to update your PATH:
 
-    $ export PATH=/usr/local/php5/bin:$PATH
+    ```
+    $ export PATH=/usr/local/php5/bin:$PATH
+    ```
+    
 
 ### Composer
 
