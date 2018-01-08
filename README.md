@@ -325,18 +325,20 @@ With that, Vim will look a lot better next time you open it!
 OS X High Sierra comes with [PHP](http://php.net/) 7.1 out of the box. In case you want to update it, follow these steps:
 
 1. Install the latest version:
+
     $ curl -s http://php-osx.liip.ch/install.sh | bash -s 7.2
 
 2. In order for the command line to use the new version of PHP you will need to update your PATH:
+
     $ export PATH=/usr/local/php5/bin:$PATH
 
 ### Composer
 
-Composer is a cross-platform dependency manager for PHP libraries. This article will explain how to install it on OS X and add an alias so you can use it from anywhere. To install, simply run:
+Composer is a cross-platform dependency manager for PHP libraries. To install it, simply run:
 
     $ curl -sS https://getcomposer.org/installer | php
     
-It lets you use it through php composer.phar. To use it globally and simply writing composer, do the following:
+It lets you use it through `php composer.phar`. To use it globally and simply writing `composer`, do the following:
 
     $ sudo mv composer.phar /usr/local/bin/composer
 
