@@ -8,15 +8,16 @@ If you have any comments or suggestions, feel free to give me a shout [on Twitte
 
 - [System update](#system-update)
 - [System preferences](#system-preferences)
-- [Google Chrome](#google-chrome)
+- [Useful apps](#useful-apps)
+- [Clipmenu](#clipmenu)
 - [iTerm2](#iterm2)
 - [Homebrew](#homebrew)
 - [Consolas](#consolas)
 - [Beautiful terminal](#beautiful-terminal)
-- [iTerm2](#iterm2)
 - [Git](#git)
 - [Sublime Text](#sublime-text)
 - [Vim](#vim)
+- [PHP](#php)
 - [Python](#python)
 - [Virtualenv](#virtualenv)
 - [IPython](#ipython)
@@ -48,15 +49,22 @@ In **Apple Icon > System Preferences**:
 - Keyboard > Delay Until Repeat > Short (all the way to the right)
 - Dock > Automatically hide and show the Dock
 
-## Google Chrome
+## Useful apps
 
-Install your favorite browser, mine happens to be Chrome.
+I use [Mac Apps](macapps.link) to quickly and easily install my favourite apps. Use the following command:
 
-Download from [www.google.com/chrome](https://www.google.com/intl/en/chrome/browser/). Open the **.dmg** file once it's done downloading (this will mount the disk image), and drag and drop the **Google Chrome** app into the Applications folder (on the Mac, most applications are installed this way). When done, you can unmount the disk in Finder (the small "eject" icon next to the disk under **Devices**).
+    $ curl -s 'http://macapps.link/es/chrome-dropbox-sequelpro-sublime-docker-iterm-unrarx-filezilla-spotify-vlc-skype' | sh
+
+## ClipMenu
+
+It's useful to have a history of clipboard elements. [ClipMenu](http://www.clipmenu.com/) is very easy to use, just type `cmd + shift + v to select which one you want to paste.
+
+Install it from this [dropbox source](https://www.dropbox.com/s/mz2v2psimbwdfql/ClipMenu.app.zip?dl=0)
+
 
 ## iTerm2
 
-Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. Download and install [iTerm2](http://www.iterm2.com/) (the newest version, even if it says "beta release").
+Since we're going to be spending a lot of time in the command-line, let's install a better terminal than the default one. If not installed using Mac Apps in the section [Useful apps](#useful-apps), download and install [iTerm2](http://www.iterm2.com/) (the newest version, even if it says "beta release").
 
 In **Finder**, drag and drop the **iTerm** Application file into the **Applications** folder.
 
@@ -125,7 +133,7 @@ Homebrew keeps older versions of packages installed, in case you want to roll ba
 To see what you have installed (with their version numbers):
 
     $ brew list --versions
-
+    
 ## Consolas
 
 I really like the Consolas font for coding. Being a Microsoft (!) font, it is not installed by default. Since we're going to be looking at a lot of terminal output and code, let's install it now.
@@ -213,7 +221,7 @@ To push code to your GitHub repositories, we're going to use the recommended HTT
 
 With the terminal, the text editor is a developer's most important tool. Everyone has their preferences, but unless you're a hardcore [Vim](http://en.wikipedia.org/wiki/Vim_(text_editor)) user, a lot of people are going to tell you that [Sublime Text](http://www.sublimetext.com/) is currently the best one out there.
 
-Go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
+If not installed using Mac Apps in the section [Useful apps](#useful-apps), go ahead and [download](http://www.sublimetext.com/) it. Open the **.dmg** file, drag-and-drop in the **Applications** folder, you know the drill now. Launch the application.
 
 **Note**: At this point I'm going to create a shortcut on the OS X Dock for both for Sublime Text and iTerm. To do so, right-click on the running application and select **Options > Keep in Dock**.
 
@@ -311,6 +319,27 @@ And finally, install the Vim "sensible defaults" by running:
     $ git clone git://github.com/tpope/vim-sensible.git
 
 With that, Vim will look a lot better next time you open it!
+
+## PHP
+
+OS X High Sierra comes with [PHP](http://php.net/) 7.1 out of the box. In case you want to update it, follow these steps:
+
+1. Install the latest version:
+    $ curl -s http://php-osx.liip.ch/install.sh | bash -s 7.2
+
+2. In order for the command line to use the new version of PHP you will need to update your PATH:
+    $ export PATH=/usr/local/php5/bin:$PATH
+
+### Composer
+
+Composer is a cross-platform dependency manager for PHP libraries. This article will explain how to install it on OS X and add an alias so you can use it from anywhere. To install, simply run:
+
+    $ curl -sS https://getcomposer.org/installer | php
+    
+It lets you use it through php composer.phar. To use it globally and simply writing composer, do the following:
+
+    $ sudo mv composer.phar /usr/local/bin/composer
+
 
 ## Python
 
@@ -838,13 +867,13 @@ Elasticsearch's [documentation](http://www.elasticsearch.org/guide/) is more of 
 
 ## Projects folder
 
-This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/Projects`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
+This really depends on how you want to organize your files, but I like to put all my version-controlled projects in `~/development`. Other documents I may have, or things not yet under version control, I like to put in `~/Dropbox` (if you have Dropbox installed), or `~/Documents`.
 
 ## Apps
 
 Here is a quick list of some apps I use, and that you might find useful as well:
 
-- [Dropbox](https://www.dropbox.com/): File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
+- [Dropbox](https://db.tt/SUglxJdA): File syncing to the cloud. I put all my documents in Dropbox. It syncs them to all my devices (laptop, mobile, tablet), and serves as a backup as well! **(Free for 2GB)**
 - [Google Drive](https://drive.google.com/): File syncing to the cloud too! I use Google Docs a lot to collaborate with others (edit a document with multiple people in real-time!), and sometimes upload other non-Google documents (pictures, etc.), so the app comes in handy for that. **(Free for 5GB)**
 - [1Password](https://agilebits.com/onepassword): Allows you to securely store your login and passwords. Even if you only use a few different passwords (they say you shouldn't!), this is really handy to keep track of all the accounts you sign up for! Also, they have a mobile app so you always have all your passwords with you (syncs with Dropbox). A little pricey though. There are free alternatives. **($50 for Mac app, $18 for iOS app)**
 - [Marked](http://markedapp.com/): As a developer, most of the stuff you write ends up being in [Markdown](http://daringfireball.net/projects/markdown/). In fact, this `README.md` file (possibly the most important file of a GitHub repo) is indeed in Markdown, written in Sublime Text, and I use Marked to preview the results everytime I save. **($4)**
