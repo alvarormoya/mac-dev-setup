@@ -51,7 +51,7 @@ In **Apple Icon > System Preferences**:
 
 ## Useful apps
 
-I use [Mac Apps](macapps.link) to quickly and easily install my favourite apps. Use the following command:
+I use [Mac Apps](http://macapps.link/) to quickly and easily install my favourite apps. Use the following command:
 
     $ curl -s 'http://macapps.link/es/chrome-dropbox-sequelpro-sublime-docker-iterm-unrarx-filezilla-spotify-vlc-skype' | sh
 
